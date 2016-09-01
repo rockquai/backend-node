@@ -12,7 +12,7 @@
 // 		res.end(); //항상end로 닫아줘야하다.
 // 	}
 
-// 	var detailId = req.url.replace("/", ""); //요청받은 '/'루터를 뒤에 다 지운다.
+// 	var detailId = req.url.replace("/", ""); // 요청받은 '/' 앞에는 다 지워라.
 // 	if ( detailId > 0 ) {
 // 		res.write(detailId);
 // 		res.end();
@@ -24,15 +24,33 @@
 
 // console.log("Server is running at localhost:3030");
 
-//ex2.
+//ex2. router.js 파일 만든 후 소스 수정
 var http = require("http");
 // 라우터를 가져온다
-var router = require("./router");
+var router = require("./router"); // './' : root
 
 var app = http.createServer(function(req, res){
 	console.log(req.url); //요청받는 url를 받는다.
 	router.home(req, res);
 	router.detail(req, res);
-}).listen(3030);
+	router.contact(req, res);
 
-console.log("Server is running at localhost:3030");
+});
+
+app.listen(3030, function (){
+	console.log("Server is running at localhost:3030");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
