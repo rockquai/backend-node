@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rockquai/backend-node/issues"
   },
-  "homepage": "https://github.com/rockquai/backend-node#readme"
+  "homepage": "https://github.com/rockquai/backend-node#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }

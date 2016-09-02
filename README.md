@@ -1,4 +1,7 @@
 # Back-End Programming for Front-End Developers
+
+[Back-End 강의 DAY1] 20160901
+
 프론트엔드 개발 SCHOOL 1기, FASTCAMPUS
 최우영, 2016
 
@@ -324,6 +327,10 @@ $ npm install body-parser --save
 ```
 
 ---
+
+[Back-End 강의 DAY2] 20160902
+
+---
 ### Node.js+Express.js
 
 `$ npm install express -g`
@@ -421,7 +428,7 @@ $ npm install gulp-uglify --save-dev
 var uglify = require("gulp-uglify");
 
 gulp.task("uglify", function(){
-	return gulp.src("public/src/*.js").pipe(uglify()).pipe(gulp.dest("/public/dist/"));
+	return gulp.src("public/src/*.js").pipe(uglify()).pipe(gulp.dest("public/dist/"));
 });
 
 gulp.task("default", ["uglify"]);
